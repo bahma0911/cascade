@@ -1,10 +1,15 @@
 const images = [
-  'https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80',
+  '/image/2girls-cascade.jpg',
+  '/image/bar-cascade.jpg',
+  '/image/cascade-word.jpg',
+  '/image/coffee-eating-cascade.jpg',
+  '/image/fountain-cascade.jpg',
+  '/image/full-cascade.jpg',
+  '/image/outside-cascade.jpg',
+  '/image/radio-cascade.jpg',
+  '/image/sideword-cascade.jpg',
+  '/image/2girls-2-cascade.jpg',
+  '/image/cascade-wordfront.jpg',
 ]
 
 export default function Gallery() {
