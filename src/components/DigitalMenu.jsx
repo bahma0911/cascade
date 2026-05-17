@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 
-const categories = ['All', 'Coffee', 'Tea', 'Desserts', 'Breakfast']
+const categories = ['All', 'Coffee', 'Tea', 'Foods' ]
 
 export default function DigitalMenu({ menuItems }) {
   const [activeCategory, setActiveCategory] = useState('All')
@@ -27,7 +27,7 @@ export default function DigitalMenu({ menuItems }) {
               type="search"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search coffee, tea, desserts..."
+              placeholder="Search coffee, tea, foods..."
               className="w-full rounded-full border border-slate-200 bg-slate-50 px-5 py-3 text-sm text-cascade-dark outline-none transition focus:border-cocoa focus:ring-2 focus:ring-cocoa/20"
             />
           </div>

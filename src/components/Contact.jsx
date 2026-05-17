@@ -7,7 +7,7 @@ export default function Contact() {
             <p className="text-sm uppercase tracking-[0.35em] text-[#d6c6b5]">Contact</p>
             <h3 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Find us and feel at home.</h3>
             <p className="mt-4 max-w-xl text-base leading-7 text-[#d6c6b5]">
-              Cascade is a calm escape in the heart of the city. Pop in for morning coffee or evening desserts in an intimate, modern setting.
+              Cascade is a calm escape in the heart of the city. Pop in for morning coffee in an intimate, modern setting.
             </p>
           </div>
           <div className="space-y-6 rounded-[2rem] bg-[#f4eee6] p-6 text-cascade-dark shadow-soft">

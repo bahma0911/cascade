@@ -9,7 +9,7 @@ const featuredItems = [
   },
   {
     id: 2,
-    category: 'Desserts',
+    category: 'Foods',
     name: 'Hazelnut Tartelette',
     description: 'Crisp pastry with rich nutty caramel cream.',
     price: 'ETB 8.00',

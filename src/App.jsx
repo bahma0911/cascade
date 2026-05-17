@@ -26,7 +26,7 @@ function App() {
             <p className="mb-3 text-sm uppercase tracking-[0.35em] text-cocoa">Welcome to Cascade</p>
             <h2 className="text-3xl font-semibold tracking-tight text-cascade-dark sm:text-4xl">A warm retreat for coffee, comfort, and conversation.</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#4b504f] sm:text-lg">
-              Discover premium brews, seasonal desserts, and a space designed for slow mornings and lingering evenings.
+              Discover premium brews and a space designed for slow mornings and lingering evenings.
             </p>
           </div>
           <FeaturedMenu />

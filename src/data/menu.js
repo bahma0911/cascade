@@ -33,7 +33,7 @@ export const menuItems = [
   },
   {
     id: 5,
-    category: 'Desserts',
+    category: 'Foods',
     name: 'Hazelnut Tartelette',
     description: 'Buttery pastry shell filled with rich hazelnut cream and caramel.',
     price: 'ETB 80',
@@ -41,7 +41,7 @@ export const menuItems = [
   },
   {
     id: 6,
-    category: 'Desserts',
+    category: 'Foods',
     name: 'Spiced Almond Cake',
     description: 'Moist almond cake topped with orange glaze and toasted seeds.',
     price: 'ETB 70',
