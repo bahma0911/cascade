@@ -1,0 +1,38 @@
+import { useState, useEffect } from 'react'
+
+export default function Footer() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 400)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <footer className="bg-[#1c2423] text-cream">
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-12 md:flex-row md:items-center md:justify-between md:px-8">
+        <div>
+          <p className="text-xl font-semibold tracking-[0.3em] text-white">Cascade</p>
+          <p className="mt-4 max-w-md text-sm leading-7 text-[#d6c6b5]">Premium cozy coffee experiences with an earthy, modern touch.</p>
+        </div>
+        <div className="flex items-center gap-4 text-sm text-[#d6c6b5]">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="transition hover:text-white">Instagram</a>
+        </div>
+      </div>
+      <div className="border-t border-white/10 px-6 py-6 text-center text-sm text-[#89937d] md:px-8">
+        © 2026 Cascade Café. All rights reserved.
+      </div>
+      {visible && (
+        <button
+          type="button"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-cocoa text-cream shadow-xl transition hover:bg-[#543e2c]"
+          aria-label="Scroll to top"
+        >
+          ↑
+        </button>
+      )}
+    </footer>
+  )
+}

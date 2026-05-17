@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cascade-cream text-cascade-dark antialiased;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+::selection {
+  background: #6b4f3a;
+  color: #f4eee6;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta-glow {
+  box-shadow: 0 22px 55px rgba(111, 85, 53, 0.18);
+}
