@@ -25,7 +25,7 @@ const featuredItems = [
   },
 ]
 
-export default function FeaturedMenu({ onSelectItem }) {
+export default function FeaturedMenu() {
   return (
     <section className="mb-16" id="menu">
       <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -53,13 +53,6 @@ export default function FeaturedMenu({ onSelectItem }) {
                 <h4 className="text-2xl font-semibold text-cascade-dark">{item.name}</h4>
                 <p className="mt-3 text-sm leading-6 text-[#4b504f]">{item.description}</p>
               </div>
-              <button
-                type="button"
-                className="inline-flex items-center rounded-full bg-cocoa px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.18em] text-cream transition hover:bg-[#543e2c]"
-                onClick={() => onSelectItem(item)}
-              >
-                View Details
-              </button>
             </div>
           </article>
         ))}

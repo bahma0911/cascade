@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 
 const categories = ['All', 'Coffee', 'Tea', 'Desserts', 'Breakfast']
 
-export default function DigitalMenu({ menuItems, onSelectItem }) {
+export default function DigitalMenu({ menuItems }) {
   const [activeCategory, setActiveCategory] = useState('All')
   const [search, setSearch] = useState('')
 
@@ -59,13 +59,6 @@ export default function DigitalMenu({ menuItems, onSelectItem }) {
                   <h4 className="text-2xl font-semibold text-cascade-dark">{item.name}</h4>
                   <p className="mt-3 text-sm leading-6 text-[#4b504f]">{item.description}</p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => onSelectItem(item)}
-                  className="inline-flex rounded-full bg-cocoa px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.18em] text-cream transition hover:bg-[#543e2c]"
-                >
-                  Explore
-                </button>
               </div>
             </article>
           ))}

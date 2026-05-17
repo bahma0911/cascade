@@ -63,4 +63,14 @@ export const menuItems = [
     price: 'ETB 100',
     image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
   },
+
+  {
+    id: 9,
+    category: 'Breakfast',
+    name: 'Bowl',
+    description: 'Quinoa, roasted roots, poached egg, and tahini drizzle.',
+    price: 'ETB 200',
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
+  },
+
 ]

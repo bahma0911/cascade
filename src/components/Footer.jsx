@@ -17,7 +17,8 @@ export default function Footer() {
           <p className="mt-4 max-w-md text-sm leading-7 text-[#d6c6b5]">Premium cozy coffee experiences with an earthy, modern touch.</p>
         </div>
         <div className="flex items-center gap-4 text-sm text-[#d6c6b5]">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="transition hover:text-white">Instagram</a>
+          <a href="https://www.instagram.com/cascadecoffee_/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="transition hover:text-white">Instagram</a>
+          <a href="tel:+251949461270" className="transition hover:text-white">+251 94 946 1270</a>
         </div>
       </div>
       <div className="border-t border-white/10 px-6 py-6 text-center text-sm text-[#89937d] md:px-8">
@@ -27,7 +28,8 @@ export default function Footer() {
         <button
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-cocoa text-cream shadow-xl transition hover:bg-[#543e2c]"
+          style={{ opacity: 1, backgroundColor: '#6b4f3a' }}
+          className="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-cocoa bg-opacity-100 opacity-100 text-white shadow-xl transition hover:bg-[#543e2c]"
           aria-label="Scroll to top"
         >
           ↑

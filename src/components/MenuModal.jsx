@@ -21,12 +21,6 @@ export default function MenuModal({ item, onClose }) {
               <span className="rounded-full bg-cocoa/10 px-4 py-2 text-sm text-cocoa">{item.category}</span>
               <span className="rounded-full bg-slate-200 px-4 py-2 text-sm text-[#5e5e5e]">Premium ingredients</span>
             </div>
-            <button
-              type="button"
-              className="mt-10 inline-flex rounded-full bg-cocoa px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-cream transition hover:bg-[#543e2c]"
-            >
-              Order Now
-            </button>
           </div>
           <div className="relative h-96 overflow-hidden bg-[#2f3437]">
             <img src={item.image} alt={item.name} className="h-full w-full object-cover" />

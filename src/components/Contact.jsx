@@ -29,16 +29,14 @@ export default function Contact() {
             </div>
             <div>
               <h4 className="text-lg font-semibold">Connect</h4>
-              <p className="mt-2 text-sm leading-7 text-[#4b504f]">Phone: +251 94 946 1270<br />Instagram: cascadecoffee_</p>
+              <p className="mt-2 text-sm leading-7 text-[#4b504f]">
+                Phone: <a href="tel:+251949461270" className="text-cocoa underline transition hover:text-[#543e2c]">+251 94 946 1270</a><br />
+                Instagram: <a href="https://www.instagram.com/cascadecoffee_/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="text-cocoa underline transition hover:text-[#543e2c]">@cascadecoffee_</a>
+              </p>
             </div>
           </div>
         </div>
-        <div className="mt-10 rounded-[2rem] border border-white/10 bg-[#111817] p-6 text-center text-sm text-[#d6c6b5] shadow-soft sm:p-8">
-          <p className="mb-4 text-lg font-medium text-white">Cascade location</p>
-          <p className="mx-auto max-w-2xl leading-7">
-            Tap the button above to open the exact café location in Google Maps, or use the map link to navigate directly from your phone.
-          </p>
-        </div>
+    
       </div>
     </section>
   )

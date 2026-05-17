@@ -7,11 +7,9 @@ import About from './components/About'
 import Gallery from './components/Gallery'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import MenuModal from './components/MenuModal'
 import { menuItems } from './data/menu'
 
 function App() {
-  const [activeItem, setActiveItem] = useState(null)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -31,15 +29,14 @@ function App() {
               Discover premium brews, seasonal desserts, and a space designed for slow mornings and lingering evenings.
             </p>
           </div>
-          <FeaturedMenu onSelectItem={setActiveItem} />
+          <FeaturedMenu />
         </section>
-        <DigitalMenu menuItems={menuItems} onSelectItem={setActiveItem} />
+        <DigitalMenu menuItems={menuItems} />
         <About />
         <Gallery />
         <Contact />
       </main>
       <Footer />
-      <MenuModal item={activeItem} onClose={() => setActiveItem(null)} />
       {!mounted && <div className="fixed inset-0 bg-[#2f3437] opacity-80" />}
     </div>
   )
