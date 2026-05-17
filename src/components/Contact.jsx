@@ -13,21 +13,31 @@ export default function Contact() {
           <div className="space-y-6 rounded-[2rem] bg-[#f4eee6] p-6 text-cascade-dark shadow-soft">
             <div>
               <h4 className="text-lg font-semibold">Opening Hours</h4>
-              <p className="mt-2 text-sm leading-7 text-[#4b504f]">Mon - Fri: 8am - 8pm<br />Sat - Sun: 9am - 9pm</p>
+              <p className="mt-2 text-sm leading-7 text-[#4b504f]">Daily: 08:00 am - 09:00 pm</p>
             </div>
             <div>
               <h4 className="text-lg font-semibold">Location</h4>
-              <p className="mt-2 text-sm leading-7 text-[#4b504f]">123 Cascade Lane, Riverside District</p>
+              <p className="mt-2 text-sm leading-7 text-[#4b504f]">Open in Google Maps for the exact café location.</p>
+              <a
+                href="https://maps.app.goo.gl/iAnoVtmYsn8PtrZ96"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-flex rounded-full bg-cocoa px-5 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-cream transition hover:bg-[#543e2c]"
+              >
+                View location
+              </a>
             </div>
             <div>
               <h4 className="text-lg font-semibold">Connect</h4>
-              <p className="mt-2 text-sm leading-7 text-[#4b504f]">Phone: +1 (555) 432-1000<br />Instagram: @cascade.cafe<br />Telegram: @cascade_coffee</p>
+              <p className="mt-2 text-sm leading-7 text-[#4b504f]">Phone: +251 94 946 1270<br />Instagram: cascadecoffee_</p>
             </div>
           </div>
         </div>
-        <div className="mt-10 rounded-[2rem] border border-white/10 bg-black/10 p-8 text-center text-sm text-[#d6c6b5] shadow-soft">
-          <p className="font-medium">Map placeholder</p>
-          <p className="mt-4 max-w-2xl mx-auto leading-7">A beautifully designed map will appear here once your site is connected to a mapping service. Until then, enjoy the warm imagery and cozy atmosphere.</p>
+        <div className="mt-10 rounded-[2rem] border border-white/10 bg-[#111817] p-6 text-center text-sm text-[#d6c6b5] shadow-soft sm:p-8">
+          <p className="mb-4 text-lg font-medium text-white">Cascade location</p>
+          <p className="mx-auto max-w-2xl leading-7">
+            Tap the button above to open the exact café location in Google Maps, or use the map link to navigate directly from your phone.
+          </p>
         </div>
       </div>
     </section>
