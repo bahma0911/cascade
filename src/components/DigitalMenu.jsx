@@ -1,21 +1,35 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
-const categories = ['All', 'Coffee', 'Tea', 'Foods' ]
+const categories = ['All', 'Hot Coffee Drinks', 'Iced Drinks & mojitios', 'Hot Tea', 'Juice', 'Breakfast', 'Pizza & Wraps', 'Other Foods', 'Extras' ]
 
 export default function DigitalMenu({ menuItems }) {
   const [activeCategory, setActiveCategory] = useState('All')
   const [search, setSearch] = useState('')
+  const [showAll, setShowAll] = useState(false)
+
+  useEffect(() => {
+    setShowAll(false)
+  }, [activeCategory])
 
   const filteredItems = useMemo(() => {
     return menuItems.filter((item) => {
       const matchesCategory = activeCategory === 'All' || item.category === activeCategory
-      const matchesSearch = item.name.toLowerCase().includes(search.toLowerCase()) || item.description.toLowerCase().includes(search.toLowerCase())
+      const matchesSearch = item.name.toLowerCase().includes(search.toLowerCase())
       return matchesCategory && matchesSearch
     })
   }, [activeCategory, menuItems, search])
 
+  const visibleItems = useMemo(() => {
+    if (activeCategory === 'All' && !showAll) {
+      return filteredItems.slice(0, 4)
+    }
+    return filteredItems
+  }, [activeCategory, filteredItems, showAll])
+
+  const showMoreButton = activeCategory === 'All' && filteredItems.length > 4
+
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-20 md:px-8">
+    <section id="menu" className="mx-auto max-w-7xl px-6 pb-20 md:px-8">
       <div className="rounded-[2rem] border border-white/10 bg-white/90 px-6 py-8 shadow-soft backdrop-blur-xl sm:px-10">
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
@@ -45,7 +59,7 @@ export default function DigitalMenu({ menuItems }) {
           ))}
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {filteredItems.map((item) => (
+          {visibleItems.map((item) => (
             <article key={item.id} className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-[#f7f2eb] shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
               <div className="relative h-56 overflow-hidden">
                 <img src={item.image} alt={item.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
@@ -57,17 +71,27 @@ export default function DigitalMenu({ menuItems }) {
                 </div>
                 <div>
                   <h4 className="text-2xl font-semibold text-cascade-dark">{item.name}</h4>
-                  <p className="mt-3 text-sm leading-6 text-[#4b504f]">{item.description}</p>
                 </div>
               </div>
             </article>
           ))}
-          {filteredItems.length === 0 && (
+          {visibleItems.length === 0 && (
             <div className="col-span-full rounded-[1.75rem] border border-dashed border-slate-300 bg-white/80 p-10 text-center text-sm text-[#5f605f]">
               No results found. Try another category or search term.
             </div>
           )}
         </div>
+        {showMoreButton && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll((prev) => !prev)}
+              className="rounded-full bg-cocoa px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-cream transition hover:bg-[#543e2c]"
+            >
+              {showAll ? 'Show less' : `Show more (${filteredItems.length - 4})`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )
