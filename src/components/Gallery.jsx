@@ -34,9 +34,7 @@ export default function Gallery() {
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {images.map((src, index) => (
           <div key={index} className="group overflow-hidden rounded-[2rem] bg-slate-950/5 shadow-soft transition hover:-translate-y-1">
-            <a href={src} target="_blank" rel="noreferrer" className="block h-full w-full">
-              <img src={src} alt={`Gallery ${index + 1}`} className="h-[320px] w-full object-cover transition duration-500 group-hover:scale-105" />
-            </a>
+            <img src={src} alt={`Gallery ${index + 1}`} className="h-[320px] w-full object-cover transition duration-500 group-hover:scale-105" />
           </div>
         ))}
       </div>
