@@ -1,27 +1,33 @@
-import img1 from '../image/2girls-cascade.jpg'
-import img2 from '../image/bar-cascade.jpg'
-import img3 from '../image/cascade-word.jpg'
-import img4 from '../image/coffee-eating-cascade.jpg'
-import img5 from '../image/fountain-cascade.jpg'
-import img6 from '../image/full-cascade.jpg'
-import img7 from '../image/outside-cascade.jpg'
-import img8 from '../image/radio-cascade.jpg'
-import img9 from '../image/sideword-cascade.jpg'
-import img10 from '../image/2girls-2-cascade.jpg'
-import img11 from '../image/cascade-wordfront.jpg'
+import img11 from '../image/bar-cascade.jpg'
+import img3 from '../image/bar.jpg'
+import img4 from '../image/blackandwhite.jpg'
+import img6 from '../image/coffee-eating-cascade.jpg'
+import img7 from '../image/fountain-cascade.jpg'
+import img8 from '../image/front.jpg'
+import img9 from '../image/full-cascade.jpg'
+import img10 from '../image/guy.jpg'
+import img2 from '../image/outside-cascade.jpg'
+import img12 from '../image/radio-cascade.jpg'
+import img13 from '../image/roofish.jpg'
+import img1 from '../image/sideword-cascade.jpg'
+import img15 from '../image/women.jpg'
+import img16 from '../image/work-space.jpg'
 
 const images = [
   img1,
   img2,
   img3,
   img4,
-  img5,
   img6,
   img7,
   img8,
   img9,
   img10,
   img11,
+  img12,
+  img13,
+  img15,
+  img16,
 ]
 
 export default function Gallery() {

@@ -22,7 +22,10 @@ export default function Navbar() {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-500 ${scrolled ? 'backdrop-blur-xl bg-slate-950/85 shadow-lg shadow-slate-950/10' : 'bg-transparent'}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8">
-        <a href="#home" className="text-lg font-semibold tracking-[0.3em] text-cream uppercase sm:text-xl">Cascade</a>
+        <a href="#home" className="flex items-center gap-2 text-lg font-semibold tracking-[0.3em] text-cream uppercase sm:text-xl">
+          <img src="/light-box.png" alt="Cascade Logo" className="h-6 w-6" />
+          Cascade
+        </a>
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <a key={link.name} href={link.href} className="text-sm font-medium text-cream transition-colors duration-300 hover:text-cocoa">
