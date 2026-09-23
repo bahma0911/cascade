@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
-const categories = ['All', 'Hot Coffee Drinks', 'Iced Drinks & mojitios', 'Hot Tea', 'Juice', 'Breakfast', 'Pizza & Wraps', 'Other Foods', 'Extras' ]
+const categories = ['All', 'Hot Coffee Drinks', 'Iced Drinks & mojitios', 'Cake', 'Hot Tea', 'Juice', 'Breakfast', 'Pizza & Wraps', 'Other Foods', 'Extras' ]
 
 export default function DigitalMenu({ menuItems }) {
   const [activeCategory, setActiveCategory] = useState('All')
